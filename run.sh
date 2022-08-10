@@ -1,0 +1,1 @@
+docker build -t tiff-conversion-image . && docker run -it --rm --name tiff-conversion-app tiff-conversion-image
