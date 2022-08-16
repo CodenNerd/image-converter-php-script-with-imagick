@@ -1,9 +1,9 @@
 <?php
 
-	$url = 'https://svs.gsfc.nasa.gov/vis/a000000/a004900/a004955/frames/5760x3240_16x9_30p/fancy/comp.0001.tif';
+	$url = getenv('src_url');
+    $convertTo = getenv('convert_to');
 
     $convertFrom = pathinfo(parse_url($url, PHP_URL_PATH), PATHINFO_EXTENSION);
-    $convertTo = "png";
 
     echo "\nConverting $convertFrom to $convertTo...\n";
 
